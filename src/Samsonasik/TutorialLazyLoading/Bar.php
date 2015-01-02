@@ -19,7 +19,8 @@ class Bar
     public function getFoo()
     {
         if (!$this->foo) {
-            return new Foo;    
+            $this->foo = new Foo;
+            return $this->foo;    
         }
         
         return $this->foo;
